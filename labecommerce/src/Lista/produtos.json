@@ -1,0 +1,98 @@
+[{
+    "id": "071",
+    "nome":"Cubos com letras",
+    "valor":100.00,
+    "img": "https://img.freepik.com/psd-gratuitas/ilustracao-3d-de-cubos-de-brinquedo-infantil-com-letras_23-2149345296.jpg?w=740&t=st=1684588396~exp=1684588996~hmac=5b0bf3c4c385d7d46f10c55b3505aeac1fefdf94f87bb756759e72b74e2bda75"
+ },
+ {
+    "id": "602",
+    "nome":"Foguete espacial",
+    "valor":59.00,
+    "img": "https://img.freepik.com/psd-gratuitas/foguete-espacial-3d-com-fumaca_23-2148938939.jpg?w=740&t=st=1684588451~exp=1684589051~hmac=5cc019b9f17d3ad703dd7c61d42765ea81674675cb7e067c4796a84eaffa1a90"
+ },
+ {
+   "id": "053",
+   "nome":"Helicóptero",
+   "valor":80.00,
+   "img": "https://img.freepik.com/psd-gratuitas/ilustracao-3d-de-helicoptero-de-brinquedo-infantil_23-2149345305.jpg?w=740&t=st=1684588480~exp=1684589080~hmac=2d488f1c0e210fcd76ce5772e5672722d067b4274c5f8832aa6990a84d7284ab"
+},
+{
+   "id": "043",
+   "nome":"Ursinho",
+   "valor":109.00,
+   "img": "https://img.freepik.com/psd-gratuitas/ilustracao-3d-do-urso-de-brinquedo-infantil_23-2149345293.jpg?w=740&t=st=1684588518~exp=1684589118~hmac=0590888dbbdb5c443adaf7611df1285b44c8db8a99f43570e401bf3439ff04c5"
+},
+{
+  "id": "765",
+  "nome":"Cubo de rubik",
+  "valor":190.00,
+  "img": "https://img.freepik.com/psd-gratuitas/ilustracao-3d-do-cubo-de-rubik-de-brinquedo-infantil_23-2149345313.jpg?1&w=740&t=st=1684588643~exp=1684589243~hmac=51fe9c05542043f8b02c0def7c2c85411363e80df252332aae1ddc3764b2b991"
+},
+{
+  "id": "875",
+  "nome":"Blocos de jogos",
+  "valor":300.00,
+  "img": "https://img.freepik.com/psd-gratuitas/ilustracao-3d-de-blocos-de-jogos-de-brinquedos-para-criancas_23-2149345294.jpg?w=740&t=st=1684588555~exp=1684589155~hmac=7a7000913ca2214f00b113a7683662bfd32b3125bc9e30a1a40530214eb2a7b5"
+},
+{
+  "id": "874",
+  "nome":"Carrinho de brinquedo",
+  "valor":159.00,
+  "img": "https://img.freepik.com/psd-gratuitas/ilustracao-3d-do-carro-de-brinquedo-infantil_23-2149345298.jpg?w=740&t=st=1684588684~exp=1684589284~hmac=c54cad439d8828ae6ea12d3a42fcf35aaddcd79a76a180b0ae863d7e3ca97cbb"
+
+},
+{
+  "id": "245",
+  "nome":"Avião de brinquedo",
+  "valor":125.00,
+  "img": "https://img.freepik.com/psd-gratuitas/ilustracao-3d-do-aviao-de-brinquedo-infantil_23-2149345309.jpg?w=740&t=st=1684588687~exp=1684589287~hmac=94f35ad9388fe111a6b2396f40b2fde37166b0ba670926eea31f3613c5b17f35"
+},
+{
+  "id": "987",
+  "nome":"Robô de brinquedo",
+  "valor":450.00,
+  "img": "https://img.freepik.com/psd-gratuitas/ilustracao-3d-do-robo-de-brinquedo-infantil_23-2149345310.jpg?w=740&t=st=1684588775~exp=1684589375~hmac=eda75fff42d08636a4c5bc62b3ba9d508d1632a9f4cd985cedf26e67251c51f9"
+},
+{
+  "id": "456",
+  "nome":"Cadeira de balanço de cavalo",
+  "valor":79.00,
+  "img": "https://img.freepik.com/psd-gratuitas/ilustracao-3d-da-cadeira-de-balanco-de-cavalo-de-brinquedo-infantil_23-2149345311.jpg?w=740&t=st=1684588789~exp=1684589389~hmac=f5e83408606ef6abf4054855552ac1edb9b61ec2bc28219cb3def76ea8b1f885"
+},
+{
+  "id": "543",
+  "nome":"Bateria de natal",
+  "valor":99.00,
+  "img": "https://img.freepik.com/psd-gratuitas/ilustracao-de-bateria-3d-de-natal_23-2149207083.jpg?w=740&t=st=1684588884~exp=1684589484~hmac=3e729ba723e07a2164ac17a34e33889904f24c3f1e2a5320d327f0e2a2dcde88"
+},
+{
+  "id": "905",
+  "nome":"Patins de brinquedo",
+  "valor":195.00,
+  "img": "https://img.freepik.com/psd-gratuitas/ilustracao-3d-de-patins-de-brinquedo-infantil_23-2149345312.jpg?w=740&t=st=1684588893~exp=1684589493~hmac=304202188218b7bfd6e645f70cdd975bf3f588132e935f92e1bd3adb6ee6d1a7"
+},
+{
+  "id": "786",
+  "nome":"Carro de pato de brinquedo",
+  "valor":350.00,
+  "img": "https://img.freepik.com/psd-gratuitas/ilustracao-3d-do-carro-de-pato-de-brinquedo-infantil_23-2149345304.jpg?w=740&t=st=1684588926~exp=1684589526~hmac=1d9f46c36e29213784d8e08059e5763238956b4956659ac0687a07e05eec0acf"
+},
+{
+  "id": "8765",
+  "nome":"Dragão",
+  "valor":400.00,
+  "img": "https://img.freepik.com/psd-gratuitas/icone-3d-para-inspiracao-de-conto-de-fadas_23-2149987268.jpg?w=740&t=st=1684589062~exp=1684589662~hmac=78e9c98eb3a9084e34864fee00d117928eb41c4e07ceba1206feff55bf6bb94e"
+},
+{
+  "id": "458",
+  "nome":"Barco",
+  "valor":170.00,
+  "img": "https://img.freepik.com/psd-gratuitas/ilustracao-3d-do-barco-de-brinquedo-infantil_23-2149345297.jpg?w=740&t=st=1684589039~exp=1684589639~hmac=3fc107ef79bd60746b4487c96ac95cc9abae6898c75857f903500a71d795a73e"
+},
+{
+  "id": "8976",
+  "nome":"Macaco",
+  "valor":340.00,
+  "img": "https://img.freepik.com/psd-gratuitas/renderizacao-3d-de-animal-selvagem_23-2149962427.jpg?w=740&t=st=1684589066~exp=1684589666~hmac=be1993bc5cfbe2f92e71b85bbf8d19843411855a9282ae602c231f420912d0ad"
+}
+]
