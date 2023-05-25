@@ -1,6 +1,7 @@
 import React from "react";
-import { Containersx,Formulario } from "./HeaderStyle";
+import { Containersx,Formulario, AreaBusca, AreaSelect} from "./HeaderStyle";
 import { useState } from "react";
+
 
 
 function Header({ buscaNome, setBuscaNome, buscaSelect, setBuscaSelect, buscaMin, setBuscaMin, buscaMax, setBuscaMax }) {
@@ -23,7 +24,7 @@ function Header({ buscaNome, setBuscaNome, buscaSelect, setBuscaSelect, buscaMin
     return (
         <Containersx>
             <Formulario>
-                <input
+                <AreaBusca 
                     type="search"
                     placeholder="Procurar produto"
                     required
@@ -31,20 +32,20 @@ function Header({ buscaNome, setBuscaNome, buscaSelect, setBuscaSelect, buscaMin
                     value={buscaNome}
                     onChange={onChangeBuscaNome}
                 />
-                <input
+                <AreaBusca
                     type="number"
                     placeholder="Valor mínimo"
                     value={buscaMin}
                     onChange={onChangeBuscaMin}
                 />
-                <input
+                <AreaBusca
                     type="number"
                     placeholder="Valor máximo"
                     value={buscaMax}
                     onChange={onChangeBuscaMax}
                 />
             </Formulario>
-            <select
+            <AreaSelect
                 className="buscaSelect"
                 value={buscaSelect}
                 onChange={onChangeBuscaSelect}
@@ -52,7 +53,7 @@ function Header({ buscaNome, setBuscaNome, buscaSelect, setBuscaSelect, buscaMin
                 <option value="">Ordenar</option>
                 <option value="crescente">Crescente</option>
                 <option value="decrescente">Decrescente</option>
-            </select>
+            </AreaSelect>
         </Containersx>
     )
 }

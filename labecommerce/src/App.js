@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Header from './componentes/Header/Header'
-import ProductCard from './componentes/ListaProdutos/ProductCard/ProductCard';
+import ProductCard from './componentes/Produto/ProductCard/ProductCard';
 import produtos from './Lista/produtos.json'
 import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components';
-import Carrinho from './componentes/Carrinho/Carrinho0/Carrinho';
+import Carrinho from './componentes/Carrinho/Carrinho'
 const GlobalStyle = createGlobalStyle`
 *{
   padding: 0;
@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
 `
 const CardsContainer = styled.div`
   max-width: 700px;
-  border: 1px solid black;
+
   display:grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
@@ -24,6 +24,10 @@ const CardsContainer = styled.div`
 const Blab = styled.div`
   display: flex;
 `
+const CarrinhoDiv = styled.div`  
+  width: 250px;
+  background-color: gray;
+`
 function App() {
   const [buscaNome, setBuscaNome] = useState('')
   const [buscaId, setBuscaId] = useState('')
@@ -31,6 +35,56 @@ function App() {
   const [buscaMin, setBuscaMin] = useState()
   const [buscaMax, setBuscaMax] = useState()
 
+
+  const [cart, setCart] = useState([{
+    "id": "071",
+    "nome":"Cubos com letras",
+    "valor":100.00,
+    "img": "https://img.freepik.com/psd-gratuitas/ilustracao-3d-de-cubos-de-brinquedo-infantil-com-letras_23-2149345296.jpg?w=740&t=st=1684588396~exp=1684588996~hmac=5b0bf3c4c385d7d46f10c55b3505aeac1fefdf94f87bb756759e72b74e2bda75"
+ }])
+  let soma = 0
+  const deletarProduto = (produto) => {
+    const produtoDel = cart.find((item) => item.id === produto.id)
+    if(produtoDel.amount >1){
+      const novoCarrinho = cart.map((item) =>{
+        if(item.id === produto.id){
+          return{...produtoDel, amount: produtoDel.amount-1}  
+        }else{
+          return item
+        }
+      })
+      setCart(novoCarrinho)
+    }else{
+      const novoCarrinho = cart.filter((item) => {
+        return item.id !== produto.id
+      })
+      setCart(novoCarrinho)
+    }
+  }
+  const produtosCarrinho = cart.map((produto) =>{
+    return(
+      <Carrinho
+      key={produto.id}
+      produto = {produto}
+      deletarProduto = {deletarProduto}
+      />
+    )
+  })
+  const addToCart = (produto) => {
+    const novoProduto = cart.find((item) => item.id === produto.id)
+    if(novoProduto === undefined){
+      setCart([...cart,{...produto, amount:1}])
+    }else{
+      const novoCarrinho = cart.map((item) =>{
+        if(item.id === produto.id){
+          return{...novoProduto, amount: novoProduto.amount+1}  
+        }else{
+          return item
+        }
+      })
+      setCart(novoCarrinho)
+    }
+  }
 
   return (
     <>
@@ -90,13 +144,18 @@ function App() {
             return (
               <ProductCard
                 produto={produto}
+                addToCart={addToCart}
               />
             )
           }
           )
         }
         </CardsContainer>
-        <Carrinho/>
+        <CarrinhoDiv>
+          <h1>Carrinho</h1>
+          <p>Valor total: R${soma}.00</p>
+          {produtosCarrinho}
+        </CarrinhoDiv>
       </Blab>
     </>
   );
