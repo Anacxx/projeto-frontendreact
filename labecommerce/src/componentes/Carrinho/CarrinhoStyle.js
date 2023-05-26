@@ -1,13 +1,17 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    max-width: 260px;
+    width:100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     align-content:center;
     padding: 10px;
     padding-top: 20px;
+`
+export const Bloco = styled.div`
+    padding-left: 10px;
+
 `
 export const Imagem = styled.img`
     width: 50%;
@@ -15,17 +19,23 @@ export const Imagem = styled.img`
 `
 export const Titulo = styled.h4`
     text-align: center;
-    padding-top: 15px;
-    color: gray;
-`
-export const Valor = styled.span`
-    color: black;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: bolder;
-    font-size:1.2rem;
-    align-self: flex-end;
-`   
 
+    font-size:1rem;
+    color: black;
+`
+export const Valor = styled.p`
+    color: black;
+    font-family:Impact, sans-serif;
+    font-weight: bolder;
+    font-size:0.9rem;
+    text-align: center;
+`   
+export const Unidades = styled.p`
+    color: black;
+    font-family:Impact, sans-serif;
+    font-size:0.8rem;
+    text-align: center;
+`
 export const Botao = styled.button`
     background-color: red;
     border: none;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './componentes/Header/Header'
 import ProductCard from './componentes/Produto/ProductCard/ProductCard';
 import produtos from './Lista/produtos.json'
@@ -26,7 +26,8 @@ const Blab = styled.div`
 `
 const CarrinhoDiv = styled.div`  
   width: 250px;
-  background-color: gray;
+  padding: 15px;
+  background-color: #CECBCD;
 `
 function App() {
   const [buscaNome, setBuscaNome] = useState('')
@@ -34,15 +35,9 @@ function App() {
   const [buscaSelect, setBuscaSelect] = useState('')
   const [buscaMin, setBuscaMin] = useState()
   const [buscaMax, setBuscaMax] = useState()
+  const [cart, setCart] = useState([])
+  const [total, setTotal] = useState(0)
 
-
-  const [cart, setCart] = useState([{
-    "id": "071",
-    "nome":"Cubos com letras",
-    "valor":100.00,
-    "img": "https://img.freepik.com/psd-gratuitas/ilustracao-3d-de-cubos-de-brinquedo-infantil-com-letras_23-2149345296.jpg?w=740&t=st=1684588396~exp=1684588996~hmac=5b0bf3c4c385d7d46f10c55b3505aeac1fefdf94f87bb756759e72b74e2bda75"
- }])
-  let soma = 0
   const deletarProduto = (produto) => {
     const produtoDel = cart.find((item) => item.id === produto.id)
     if(produtoDel.amount >1){
@@ -58,6 +53,9 @@ function App() {
       const novoCarrinho = cart.filter((item) => {
         return item.id !== produto.id
       })
+      if(novoCarrinho.length === 0){
+        setTotal(0)
+      }
       setCart(novoCarrinho)
     }
   }
@@ -85,7 +83,15 @@ function App() {
       setCart(novoCarrinho)
     }
   }
-
+  useEffect(() => {
+    let soma = 0
+    if(cart.length){
+      cart.map((item) => {
+        return (soma= soma + (item.amount*item.valor))
+      })
+      setTotal(soma)
+    }
+  },[cart])
   return (
     <>
       <GlobalStyle/>
@@ -153,7 +159,7 @@ function App() {
         </CardsContainer>
         <CarrinhoDiv>
           <h1>Carrinho</h1>
-          <p>Valor total: R${soma}.00</p>
+          <p>Valor total:R${total},00</p>
           {produtosCarrinho}
         </CarrinhoDiv>
       </Blab>

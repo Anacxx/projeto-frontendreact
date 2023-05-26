@@ -16,14 +16,14 @@ export const Imagem = styled.img`
 export const Titulo = styled.h4`
     text-align: center;
     padding-top: 15px;
-    color: gray;
+    color: black;
 `
 export const Valor = styled.span`
     color: #04AA6D;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: bolder;
-    font-size:1.2rem;
-    align-self: flex-end;
+    font-size:1rem;
+
 `   
 
 export const Botao = styled.button`

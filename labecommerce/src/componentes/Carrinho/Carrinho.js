@@ -1,12 +1,15 @@
 import React from "react";
-import { Container,Imagem, Titulo, Valor, Botao } from "./CarrinhoStyle";
+import { Container,Imagem, Titulo, Valor, Botao, Unidades, Bloco } from "./CarrinhoStyle";
 function ProductCard(props){
     return(
         <Container>
             <Imagem src={props.produto.img}/>
-            <Titulo>{props.produto.nome}</Titulo>
-            <p>Quantidade: {props.produto.amount}</p>
-            <Valor>{props.produto.valor}R$ </Valor><Botao onClick={() => props.deletarProduto(props.produto)}> Remover</Botao>  
+            <Bloco>
+                <Titulo>{props.produto.nome}</Titulo>
+                <Valor>{props.produto.valor},00R$ </Valor>
+                <Unidades>Quantidade: {props.produto.amount}</Unidades>
+                <Botao onClick={() => props.deletarProduto(props.produto)}> Remover</Botao>  
+            </Bloco>
         </Container>
     )
 }
