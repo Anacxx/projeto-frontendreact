@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Header from './Componentes/Header/Header'
+import Header from './Componentes/Header/Header.js';
 import ProductCard from './Componentes/ProductCard/ProductCard'
 import produtos from './Lista/produtos.json'
 import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components';
-import Carrinho from './Componentes/Carrinho/Carrinho'
+import Carrinho from './Componentes/Carrinho/Carrinho';
+import Filtros from './Componentes/Filtros/Filtros';
 const GlobalStyle = createGlobalStyle`
 *{
   padding: 0;
@@ -14,21 +15,16 @@ const GlobalStyle = createGlobalStyle`
 }
 `
 const CardsContainer = styled.div`
-  max-width: 70;
-  border: 1px solid black;
   display:grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
 `
-const Blab = styled.div`
-  display: flex;
-  border: 1px solid black;  
-  justify-content: center;
+const Principal = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
 `
-const CarrinhoDiv = styled.div`  
-  width: 30%;
-  padding: 15px;
+const CarrinhoContainer = styled.div`  
   background-color: #CECBCD;
 `
 function App() {
@@ -108,19 +104,21 @@ function App() {
   return (
     <>
       <GlobalStyle/>
-      <Header
-        buscaNome={buscaNome}
-        setBuscaNome={setBuscaNome}
-        buscaId={buscaId}
-        setBuscaId={setBuscaId}
-        buscaSelect={buscaSelect}
-        setBuscaSelect={setBuscaSelect}
-        buscaMin={buscaMin}
-        setBuscaMin={setBuscaMin}
-        buscaMax={buscaMax}
-        setBuscaMax={setBuscaMax}
-      />
-      <Blab>
+      <Header/>
+      <Principal>
+        <Filtros
+          buscaNome={buscaNome}
+          setBuscaNome={setBuscaNome}
+          buscaId={buscaId}
+          setBuscaId={setBuscaId}
+          buscaSelect={buscaSelect}
+          setBuscaSelect={setBuscaSelect}
+          buscaMin={buscaMin}
+          setBuscaMin={setBuscaMin}
+          buscaMax={buscaMax}
+          setBuscaMax={setBuscaMax}
+                >
+        </Filtros>
         <CardsContainer>
           {
           produtos
@@ -170,12 +168,12 @@ function App() {
             )
           }
         </CardsContainer>
-        <CarrinhoDiv>
+        <CarrinhoContainer>
           <h1>Carrinho</h1>
           <p>Valor total:R${total},00</p>
           {produtosCarrinho}
-        </CarrinhoDiv>
-      </Blab>
+        </CarrinhoContainer>
+      </Principal>
     </>
   );
 }

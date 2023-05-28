@@ -1,10 +1,9 @@
 import React from "react";
-import { Containersx,Formulario, AreaBusca, AreaSelect} from "./HeaderStyle";
-import { useState } from "react";
+import { Containersx, AreaBusca, AreaSelect} from "./FiltrosStyle";
 
 
 
-function Header({ buscaNome, setBuscaNome, buscaSelect, setBuscaSelect, buscaMin, setBuscaMin, buscaMax, setBuscaMax }) {
+function Filtros({ buscaNome, setBuscaNome, buscaSelect, setBuscaSelect, buscaMin, setBuscaMin, buscaMax, setBuscaMax }) {
     function onChangeBuscaNome(e) {
         setBuscaNome(e.target.value)
         console.log(buscaNome)
@@ -23,7 +22,6 @@ function Header({ buscaNome, setBuscaNome, buscaSelect, setBuscaSelect, buscaMin
     }
     return (
         <Containersx>
-            <Formulario>
                 <AreaBusca 
                     type="search"
                     placeholder="Procurar produto"
@@ -44,7 +42,6 @@ function Header({ buscaNome, setBuscaNome, buscaSelect, setBuscaSelect, buscaMin
                     value={buscaMax}
                     onChange={onChangeBuscaMax}
                 />
-            </Formulario>
             <AreaSelect
                 className="buscaSelect"
                 value={buscaSelect}
@@ -57,4 +54,4 @@ function Header({ buscaNome, setBuscaNome, buscaSelect, setBuscaSelect, buscaMin
         </Containersx>
     )
 }
-export default Header;
+export default Filtros;
