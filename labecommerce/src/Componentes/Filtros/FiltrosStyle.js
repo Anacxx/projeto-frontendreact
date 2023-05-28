@@ -11,7 +11,6 @@ export const Containersx = styled.div`
 export const Formulario = styled.form`
     display: flex;
     gap: 20px;
-
 `;
 export const AreaBusca = styled.input`
   background-color: white;
