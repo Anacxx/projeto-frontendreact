@@ -66,22 +66,22 @@ Exemplo de estruturação de **UM** produto (Lembrem-se que vocês terão uma li
 
 ### Lista de Requisitos
 - Home (Lista de Produtos)
-    - [ ]  O usuário deve ser capaz de visualizar uma lista de produtos
-    - [ ]  O usuário deve ser capaz de visualizar os dados do produto (nome, preço e imagem)
-    - [ ]  O usuário deve ser capaz de adicionar um produto no carrinho
+    - [ok]  O usuário deve ser capaz de visualizar uma lista de produtos
+    - [ok]  O usuário deve ser capaz de visualizar os dados do produto (nome, preço e imagem)
+    - [ok]  O usuário deve ser capaz de adicionar um produto no carrinho
 - Carrinho
-    - [ ]  O usuário deve ser capaz de visualizar os produtos adicionados
-    - [ ]  O usuário deve ser capaz de visualizar a quantidade correta de cada produto
-    - [ ]  O usuário deve ser capaz de remover itens do carrinho
-    - [ ]  O usuário deve ser capaz de ver corretamente o valor total de sua compra
-    - [ ]  Quando a página é atualizada, os itens devem continuar no carrinho
+    - [ok]  O usuário deve ser capaz de visualizar os produtos adicionados
+    - [ok]  O usuário deve ser capaz de visualizar a quantidade correta de cada produto
+    - [ok]  O usuário deve ser capaz de remover itens do carrinho
+    - [ok]  O usuário deve ser capaz de ver corretamente o valor total de sua compra
+    - [ok]  Quando a página é atualizada, os itens devem continuar no carrinho
 - Filtros e Ordenação
-    - [ ]  O usuário deve ser capaz de filtrar os itens por preço mínimo
-    - [ ]  O usuário deve ser capaz de filtrar os itens por preço máximo
-    - [ ]  O usuário deve ser capaz de realizar uma busca por nome
-    - [ ]  O usuário deve ser capaz de ordenar os itens em ordem crescente ou decrescente
-    - [ ]  O usuário deve ser capaz de adicionar  filtros, busca e ordenação simultaneamente
-    - [ ]  O usuário deve ser capaz de retornar à visualização sem filtros
+    - [ok]  O usuário deve ser capaz de filtrar os itens por preço mínimo
+    - [ok]  O usuário deve ser capaz de filtrar os itens por preço máximo
+    - [ok]  O usuário deve ser capaz de realizar uma busca por nome
+    - [ok]  O usuário deve ser capaz de ordenar os itens em ordem crescente ou decrescente
+    - [ok]  O usuário deve ser capaz de adicionar  filtros, busca e ordenação simultaneamente
+    - [ok]  O usuário deve ser capaz de retornar à visualização sem filtros
     
  ### 
 
@@ -93,7 +93,7 @@ http://fluttering-coast.surge.sh/
 https://user-images.githubusercontent.com/11279432/197185533-14582ca3-9eb0-4a5a-b57c-b94913ff2dd6.mp4
 
 
-
+link surge: profuse-bears.surge.sh
     
   ### Conseguiu terminar? Aqui temos alguns **desafios**
   1. Salvar e Recuperar conteúdo do carrinho usando o `LocalStorage`;
