@@ -24,12 +24,12 @@ O tema escolhido para este projeto é uma loja de brinquedos, onde os usuários 
    git clone https://github.com/Anacxx/projeto-frontendreact.git
 2. **Navegue até o diretório do projeto:**
    ```bash
-cd projeto-frontendreact
+    cd projeto-frontendreact
 3. **Instale as dependências necessárias:**
    ```bash
-npm install
+    npm install
 4. **Inicie a aplicação:**
-npm start
+    npm start
 
 
 Agora você pode acessar a aplicação em seu navegador no endereço http://localhost:3000 e começar a explorar a loja de brinquedos interativa, aplicando os conceitos aprendidos ao longo do projeto.
