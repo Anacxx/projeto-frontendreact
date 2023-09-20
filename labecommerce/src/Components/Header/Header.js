@@ -1,9 +1,10 @@
 import React from "react";
-import {HeaderDiv, Titulo} from "./HeaderStyle";
+import logo from '../../images/logo.png'
+import {HeaderDiv, SyledImg} from "./HeaderStyle";
 function Header(){
     return(
         <HeaderDiv>
-            <Titulo>Loja de brinquedos</Titulo>
+            <SyledImg src={logo}/>
         </HeaderDiv>
     )
 }

@@ -1,7 +1,5 @@
 import React from "react";
-import { Containersx, AreaBusca, AreaSelect} from "./FiltrosStyle";
-
-
+import { StyledInput, AreaSelect, StyledContainer, StyledTitle} from "./FiltersStyle";
 
 function Filtros({ buscaNome, setBuscaNome, buscaSelect, setBuscaSelect, buscaMin, setBuscaMin, buscaMax, setBuscaMax }) {
     function onChangeBuscaNome(e) {
@@ -21,8 +19,9 @@ function Filtros({ buscaNome, setBuscaNome, buscaSelect, setBuscaSelect, buscaMi
         console.log(buscaMax)
     }
     return (
-        <Containersx>
-                <AreaBusca 
+        <StyledContainer>
+                <StyledTitle>Busca por categoria</StyledTitle>
+                <StyledInput 
                     type="search"
                     placeholder="Procurar produto"
                     required
@@ -30,13 +29,13 @@ function Filtros({ buscaNome, setBuscaNome, buscaSelect, setBuscaSelect, buscaMi
                     value={buscaNome}
                     onChange={onChangeBuscaNome}
                 />
-                <AreaBusca
+                <StyledInput
                     type="number"
                     placeholder="Valor mínimo"
                     value={buscaMin}
                     onChange={onChangeBuscaMin}
                 />
-                <AreaBusca
+                <StyledInput
                     type="number"
                     placeholder="Valor máximo"
                     value={buscaMax}
@@ -51,7 +50,7 @@ function Filtros({ buscaNome, setBuscaNome, buscaSelect, setBuscaSelect, buscaMi
                 <option value="crescente">Crescente</option>
                 <option value="decrescente">Decrescente</option>
             </AreaSelect>
-        </Containersx>
+        </StyledContainer>
     )
 }
 export default Filtros;

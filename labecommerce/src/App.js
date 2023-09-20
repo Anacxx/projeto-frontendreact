@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Header from './Componentes/Header/Header.js';
-import ProductCard from './Componentes/ProductCard/ProductCard'
+import Header from './Components/Header/Header.js';
+import ProductCard from './Components/ProductCard/ProductCard.js'
 import produtos from './Lista/produtos.json'
-import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components';
-import Carrinho from './Componentes/Carrinho/Carrinho';
-import Filtros from './Componentes/Filtros/Filtros';
+import Carrinho from './Components/Cart/Cart.js';
+import Filters from './Components/Filters/Filters.js';
+import { CardsContainer, CartContainer, Main, StyledTotal } from './styles.js';
 const GlobalStyle = createGlobalStyle`
 *{
   padding: 0;
@@ -13,19 +13,6 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
 }
-`
-const CardsContainer = styled.div`
-  display:grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-`
-const Principal = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-`
-const CarrinhoContainer = styled.div`  
-  background-color: #CECBCD;
 `
 function App() {
   const [buscaNome, setBuscaNome] = useState('')
@@ -105,8 +92,8 @@ function App() {
     <>
       <GlobalStyle/>
       <Header/>
-      <Principal>
-        <Filtros
+      <Main>
+        <Filters
           buscaNome={buscaNome}
           setBuscaNome={setBuscaNome}
           buscaId={buscaId}
@@ -118,7 +105,7 @@ function App() {
           buscaMax={buscaMax}
           setBuscaMax={setBuscaMax}
                 >
-        </Filtros>
+        </Filters>
         <CardsContainer>
           {
           produtos
@@ -156,6 +143,7 @@ function App() {
             } else if ( buscaSelect === "decrescente") {
               return a.nome > b.nome ? -1 : 1;
             }
+              return 0;
           })
           .map((produto) => {
               return (
@@ -168,12 +156,12 @@ function App() {
             )
           }
         </CardsContainer>
-        <CarrinhoContainer>
+        <CartContainer>
           <h1>Carrinho</h1>
-          <p>Valor total:R${total},00</p>
+          <StyledTotal>Total: R${total},00</StyledTotal>
           {produtosCarrinho}
-        </CarrinhoContainer>
-      </Principal>
+        </CartContainer>
+      </Main>
     </>
   );
 }
