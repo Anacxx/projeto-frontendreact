@@ -29,9 +29,10 @@ O tema escolhido para este projeto é uma loja de brinquedos, onde os usuários 
    ```bash
     npm install
 4. **Inicie a aplicação:**
+   ```bash
     npm start
 
 
 Agora você pode acessar a aplicação em seu navegador no endereço http://localhost:3000 e começar a explorar a loja de brinquedos interativa, aplicando os conceitos aprendidos ao longo do projeto.
 
-[Surge](toy-shop-projeto.surge.sh)
+Link do Surge: toy-shop-projeto.surge.sh
